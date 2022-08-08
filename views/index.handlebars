@@ -1,0 +1,22 @@
+<h2>SimpleChat WebApp</h2>
+
+<em>PS: Refresh page to check for new messages</em>
+<form action="/" method="post">
+    <label for="message">Enter your message:
+        <input type="text" name="message">
+    </label>
+    <button type="submit">SEND</button>
+</form>
+
+<div class="messages">
+    {{#if messages}}
+    <ul>
+        {{#each messages}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    {{#unless messages}}
+        <p>No messages, send message</p>
+    {{/unless}}
+</div>
